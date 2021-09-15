@@ -22,36 +22,38 @@
     max-width: 270px;
     width: 100%;
     margin-right: 30px;
+
     &:last-child {
       margin-right: 0;
     }
   }
 
   &__address,
-  &__phone,
-  &__email,
   &__link,
   &__text,
   &__copy,
-  &__nav-link {
+  &__navlink {
     font-size: 14px;
     color: $grey;
     @extend %Rubik400;
   }
 
   &__address,
-  &__phone,
-  &__email {
+  &__link,
+  &__navlink {
+
+    &:hover {
+      color: $footer-title
+    }
+  }
+
+  &__address {
     display: block;
     text-transform: uppercase;
     margin-bottom: 10px;
 
     & span {
       text-transform: none;
-    }
-
-    &:hover {
-      color: $footer-title
     }
   }
 
@@ -64,18 +66,10 @@
   &__link {
     display: block;
     margin-bottom: 8px;
-
-    &:hover {
-      color: $footer-title
-    }
   }
 
   &__text {
     margin-bottom: 35px;
-
-    &:hover {
-      color: $grey;
-    }
   }
 
   &__input {
@@ -86,6 +80,8 @@
     background-color: #fef7f0;
     color: $placeholder;
     font-size: 14px;
+    outline-color: $btn;
+
     &::placeholder {
       font-size: 12px;
       line-height: 12px;
@@ -95,11 +91,11 @@
   }
 
   &__btn {
-    margin-left: -4px;
-    padding: 12px 18px 12px 16px;
+    margin-left: -5px;
+    padding: 12px 18px 14px 16px;
     border: none;
     background-color: $btn;
-    color:#fff;
+    color: #fff;
     @extend %DM-Sans400;
     font-size: 14px;
     line-height: 14px;
@@ -113,11 +109,16 @@
     padding: 30px 0;
   }
 
-  &__nav-link {
+  &__nav {
+    display: flex;
+  }
+
+  &__navlist {
     margin-right: 31px;
     position: relative;
-    &:hover {
-      color: $footer-title
+
+    &:last-child {
+      margin-right: 0;
     }
 
     &::after {
@@ -125,14 +126,9 @@
       position: absolute;
       width: 1px;
       height: 18px;
+      top: 3px;
       right: -16px;
-      top: 0;
       background-color: $grey;
-      cursor: default;
-    }
-
-    &:last-child {
-      margin-right: 0;      
     }
 
     &:last-child::after {
@@ -140,4 +136,3 @@
     }
   }
 }
-

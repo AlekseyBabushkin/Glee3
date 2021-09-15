@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }  
+  }
 }
 
 .logo {
@@ -69,32 +69,33 @@
     margin-right: 20px;
     width: 50px;
     height: 50px;
-    border-radius: 50%;    
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     &:last-child {
       margin: 0 0 0 20px;
-    }    
+    }
   }
 
   &__link,
   &__link-left,
   &__link-right {
     & svg {
-      transition: 0.3s; 
+      transition: 0.3s;
     }
 
-    &:hover {  
-       svg{
-        transform: scale(1.2);  
-      }          
+    &:hover {
+      svg {
+        transform: scale(1.2);
+      }
     }
   }
 
   &__link-search {
     background-color: #edf1f4;
+
     path {
       fill: $default;
     }
@@ -102,6 +103,7 @@
 
   &__link-dots {
     background-color: $btn;
+
     path {
       fill: #fff;
     }
@@ -123,11 +125,12 @@
 
     path {
       fill: $default;
-    }    
+    }
   }
 
   &__link-left {
     border-radius: 25px 0 0 25px;
+
     &::after {
       content: '';
       position: absolute;
