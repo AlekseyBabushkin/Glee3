@@ -1,0 +1,138 @@
+.footer {
+  background-color: #fff;
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #dae4e9;
+  }
+
+  &__contacts {
+    max-width: 200px;
+    width: 100%;
+    margin-right: 100px;
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__inner {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__address,
+  &__link,
+  &__text,
+  &__copy,
+  &__navlink {
+    font-size: 14px;
+    color: $grey;
+    @extend %Rubik400;
+  }
+
+  &__address,
+  &__link,
+  &__navlink {
+
+    &:hover {
+      color: $footer-title
+    }
+  }
+
+  &__address {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    & span {
+      text-transform: none;
+    }
+  }
+
+  &__title {
+    @extend %DM-Sans700;
+    color: $footer-title;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+  }
+
+  &__input {
+    max-width: 170px;
+    width: 100%;
+    padding: 7px 15px;
+    border: none;
+    background-color: #fef7f0;
+    color: $placeholder;
+    font-size: 14px;
+    outline-color: $btn;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 12px;
+      color: $placeholder;
+      @extend %DM-Sans400;
+    }
+  }
+
+  &__btn {
+    margin-left: -5px;
+    padding: 12px 18px 14px 16px;
+    border: none;
+    background-color: $btn;
+    color: #fff;
+    @extend %DM-Sans400;
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__navlist {
+    margin-right: 31px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 18px;
+      top: 3px;
+      right: -16px;
+      background-color: $grey;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}

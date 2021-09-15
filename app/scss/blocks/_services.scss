@@ -1,0 +1,42 @@
+.services {
+  margin-bottom: 65px;
+
+  &__row {
+    background-color: #fef7f0;
+    display: flex;
+  }
+
+  &__items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: calc(100%/3);
+    border-right: 1px solid #e8e4df;
+    padding: 45px 0 40px 0;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+
+  &__title {
+    display: block;
+    @extend %DM-Sans700;
+    font-size: 18px;
+    line-height: 18px;
+    color: #414141;
+    margin-bottom: 7px;
+    margin-left: 25px;
+  }
+
+  &__text {
+    @extend %DM-Sans500;
+    color: #585858;
+    line-height: 30px;
+    max-width: 218px;
+    margin-left: 25px;
+  }
+
+
+}

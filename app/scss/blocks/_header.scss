@@ -1,0 +1,165 @@
+.header {
+  background-color: #fff;
+  padding: 50px 0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  &__link {
+    color: $title;
+    display: flex;
+    align-items: center;
+    @extend %Rubik500;
+    font-size: 36px;
+  }
+
+  &__img {
+    margin-right: 10px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__items {
+    margin-right: 26px;
+    transition: all 0.9s;
+    position: relative;
+    padding: 0 2px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transition: 0.3s;
+      background-color: $title;
+      transform: scale(0);
+    }
+
+    &:hover::before {
+      transform: scale(1);
+    }
+  }
+
+  &__link {
+    @extend %Rubik500;
+    color: $title;
+    font-size: 15px;
+  }
+}
+
+.navbar {
+  display: flex;
+
+  &__link {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:last-child {
+      margin: 0 0 0 20px;
+    }
+  }
+
+  &__link,
+  &__link-left,
+  &__link-right {
+    & svg {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__link-search {
+    background-color: #edf1f4;
+
+    path {
+      fill: $default;
+    }
+  }
+
+  &__link-dots {
+    background-color: $btn;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__link-left,
+  &__link-right {
+    background-color: $accent;
+    width: 88px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    path {
+      fill: $default;
+    }
+  }
+
+  &__link-left {
+    border-radius: 25px 0 0 25px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 32px;
+      top: 9px;
+      right: 0;
+      background-color: #fff;
+    }
+  }
+
+  &__link-right {
+    border-radius: 0 25px 25px 0;
+  }
+
+  &__num {
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 10px;
+    @extend %DM-Sans400;
+    color: $default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+  }
+
+}
